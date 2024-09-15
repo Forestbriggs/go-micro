@@ -1,0 +1,13 @@
+# Compiled binaries
+*.o
+*.a
+*.so
+
+# Test binaries
+*_test
+
+# Build output
+bin/
+
+# Dependency management
+vendor/
