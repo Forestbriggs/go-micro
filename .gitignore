@@ -1,3 +1,5 @@
+.vscode/
+
 # Compiled binaries
 *.o
 *.a
