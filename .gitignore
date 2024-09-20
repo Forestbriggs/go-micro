@@ -57,6 +57,9 @@ pgdata/
 **/pgdata/
 **/db-data/
 
+# SQL stuff
+*.sql
+
 # System files
 .DS_Store
 Thumbs.db
