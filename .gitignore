@@ -1,15 +1,85 @@
-.vscode/
+# Logs
+logs/
+*.log
+*.log.*
 
-# Compiled binaries
-*.o
-*.a
+# Binaries and build artifacts
+*.exe
+*.dll
 *.so
-
-# Test binaries
-*_test
-
-# Build output
+*.dylib
+*.test
+*.out
 bin/
+pkg/
 
-# Dependency management
+# Go module files
+go.sum
+go.work
+go.work.sum
+
+# Dependency directories (remove the comment if you have dependencies in these directories)
 vendor/
+Godeps/
+
+# Output of the go coverage tool
+*.cover
+*.cov
+*.out
+coverage/
+coverage.out
+
+# IDEs and Editors
+.idea/
+.vscode/
+*.sublime-workspace
+*.sublime-project
+
+# Environment files
+.env
+.env.*
+*.env
+
+# Docker
+docker-compose.override.yml
+docker-compose.debug.yml
+.dockerignore
+
+# Docker volumes and build artifacts
+**/container/
+**/build/
+db-data/
+pgdata/
+*.tar
+
+# PostgreSQL data
+**/postgres-data/
+**/pgdata/
+**/db-data/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Linux
+*~
+
+# Common patterns from macOS
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# Files that might appear when mounting volumes
+.Trashes
+Spotlight-V100
+
+# Common patterns from Windows
+desktop.ini
+$RECYCLE.BIN/
+ntuser.dat
+ntuser.dat.LOG
+ntuser.dat.LOG1
+ntuser.dat.LOG2
+ntuser.ini
