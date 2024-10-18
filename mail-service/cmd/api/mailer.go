@@ -64,6 +64,32 @@ func (m *Mail) SendSMTPMessage(msg Message) error {
 	server.KeepAlive = false
 	server.ConnectTimeout = 10 * time.Second
 	server.SendTimeout = 10 * time.Second
+
+	smtpClient, err := server.Connect()
+	if err != nil {
+		return err
+	}
+
+	email := mail.NewMSG()
+	email.SetFrom(msg.From).
+		AddTo(msg.To).
+		SetSubject(msg.Subject)
+
+	email.SetBody(mail.TextPlain, plainMessage)
+	email.AddAlternative(mail.TextHTML, formattedMessage)
+
+	if len(msg.Attachments) > 0 {
+		for _, x := range msg.Attachments {
+			email.AddAttachment(x)
+		}
+	}
+
+	err = email.Send(smtpClient)
+	if err != nil {
+		return err
+	}
+
+	return nil
 }
 
 func (m *Mail) buildHTMLMessage(msg Message) (string, error) {
