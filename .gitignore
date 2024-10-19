@@ -91,5 +91,6 @@ broker-service/brokerApp
 authentication-service/authApp
 logger-service/loggerServiceApp
 front-end/frontApp
+front-end/frontEndApp
 mail-service/mailServiceApp
 listener-service/listenerApp
