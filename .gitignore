@@ -93,3 +93,4 @@ authentication-service/authApp
 logger-service/loggerServiceApp
 front-end/frontApp
 mail-service/mailServiceApp
+listener-service/listenerApp
